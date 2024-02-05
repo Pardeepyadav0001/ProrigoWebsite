@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+  
 }
 
 .h4 {
@@ -10,14 +11,34 @@
 
 }
 
+.h2{
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+
 body footer {
-    background-color: #333;
+    background-color:plum;
     color: #fff;
     padding: 10px;
     text-align: center;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+  
+}
+
+.Container19 h2{
+    text-align: left;
+}
+
+.Container19 h5{
+    text-align: left;
+}
+
+.Container19 p{
+    text-align: left;
 }
 
 .navbar {
@@ -133,6 +154,59 @@ body footer {
     padding: 20px;
 }
 
+.Container12{
+
+    background-color: paleturquoise;
+    width: 150px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    float: left;
+  
+}
+.Container13{
+    background-color: paleturquoise;
+    width: 150px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    float: left;
+}
+.Container14{
+    background-color: paleturquoise;
+    width: 150px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    float: left;
+}
+.Container15{
+    background-color: paleturquoise;
+    width: 150px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    float: left;
+}
+
+
+
+
+.Container16{
+    background-color: paleturquoise;
+    width: 150px;
+    height: 300px;
+    padding: 30px;
+    margin: 15px;
+    float: left;
+}
+
+.Container18{
+    background-color: paleturquoise;
+}
+
+
+
 
 .menu {
     text-align: right;
@@ -179,3 +253,106 @@ body footer {
     background-color: #04AA6D;
     color: white;
 }
+
+
+.Container10 h2 {
+    text-align: center;
+    align-content: flex-start;
+    padding-right: 250px;
+}
+
+
+.Container11{
+
+    text-align: center;
+    align-content: flex-start;
+    padding-right: 250px;
+}
+
+.Container17{
+    width: auto;
+    height: 70px;
+    background-color: rgb(95, 74, 115);
+    color: white;
+
+}
+
+.footer-tittle h4 {
+
+    align-items:flex-start;  
+    position: relative; 
+}
+.x, .y, .z {
+    display: inline-block; /* Display these divs as inline-block elements */
+    vertical-align: top; /* Align them to the top of their container */
+    margin-right: 100px; /* Adjust spacing between each section */
+    margin-bottom:200px;
+    margin-top:10px;
+   
+}
+
+
+    hr {
+        border: none;
+        border-top: 2px solid #ab2323; /* Example color for the line */
+        margin: 30px 0; /* Example margin */
+    }
+    
+/* Style for the slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Style for the individual slides */
+.mySlides {
+    display: none;
+}
+
+/* Style for the navigation arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+/* Positioning for the previous arrow */
+.prev {
+    left: 0;
+}
+
+/* Positioning for the next arrow */
+.next {
+    right: 0;
+}
+
+.a {
+
+    display: inline-block; /* Display these divs as inline-block elements */
+    vertical-align: top; /* Align them to the top of their container */
+    margin-right: 100px; /* Adjust spacing between each section */
+    margin-bottom:200px;
+    margin-top:10px;
+    align-items:flex-start;  
+    position: relative; 
+}
+.b{
+    display: inline-block; /* Display these divs as inline-block elements */
+    vertical-align: top; /* Align them to the top of their container */
+    margin-right: 100px; /* Adjust spacing between each section */
+    margin-bottom:200px;
+    margin-top:10px;
+    align-items:flex-start;  
+    position: relative; 
+
+}
+
