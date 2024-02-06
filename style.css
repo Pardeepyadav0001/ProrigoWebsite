@@ -226,7 +226,7 @@ body footer {
 .topnav {
     overflow: hidden;
     background-color: #333;
-    position: relative;
+    position: fixed;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
@@ -284,6 +284,7 @@ body footer {
     height: 70px;
     background-color: rgb(95, 74, 115);
     color: white;
+    position: relative;
 
 }
 
@@ -366,3 +367,100 @@ body footer {
 
 }
 
+.container h2{
+text-align: center;
+text-size-adjust: bold;
+
+}
+
+
+
+#myLinks{
+    text-align: right;
+}
+
+#myLinks a {
+    /* Change the color of the "Home" link */
+    text-align: right;
+    margin-right: 20px;
+    color: rgb(228, 220, 220);
+  }
+
+  .border-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+}
+.border-button:hover {
+    background-color: #0056b3; /* Button background color on hover */
+    border-color: #0056b3; /* Button border color on hover */
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 25px;
+    padding: 5px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    font-size: 25px;
+    padding: 5px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    font-size: 25px;
+    padding: 5px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    font-size: 25px;
+    padding: 5px;
+}
+
+/* Adjust size of textarea */
+textarea {
+    width: 40%; /* Set the width to 100% of its container */
+    height: 150px; /* Set a fixed height */
+    padding: 5px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="dropdown"],
+
+
+select {
+    width: 30%; /* Set the width to 100% of its container */
+    padding: 5px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 10px; /* Add margin */
+    text-align: left;
+}
+
+/* Adjust size of submit button */
+input[type="submit"] {
+    padding: 10px 20px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    margin-top: 10px; /* Add margin */
+}
+
+/* Style for slideshow container */
+.slideshow-container {
+ 
+ 
+  }
+  
+  /* Style for slideshow image */
+  .slideshow-image {
+    width: 100%; /* Set the width of the image */
+   height: 100%; /* You can add more styles here as needed */
+  }
+  
