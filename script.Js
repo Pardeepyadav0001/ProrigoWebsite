@@ -30,31 +30,65 @@ function saveFile() {
   const dropdown = document.getElementById("dropdown").value;
   const message = document.getElementById("message").value;
 
-  let data = "Name: " + name + "\n" +
-             "Email: " + email + "\n" +
-             "Contact: " + contact + "\n" +
-             "Service: " + dropdown + "\n" +
-             "Message: " + message;
+  const formData = {
+      Name: name,
+      Email: email,
+      "Contact No": contact,
+      Service: dropdown,
+      Message: message
+  };
 
-  const textToBLOB = new Blob([data], { type: "text/plain" });
-  const filename = "formData.txt";
-
-  let newLink = document.createElement("a");
-  newLink.download = filename;
-
-  if (window.webkitURL != null) {
-      newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+  const format = prompt("Please enter the format you want (text, csv, xml, json):");
+  
+  let data, mimeType, extension;
+  if (format === "csv") {
+      data = convertToCSV(formData);
+      mimeType = "text/csv";
+      extension = "csv";
+  } else if (format === "xml") {
+      data = convertToXML(formData);
+      mimeType = "text/xml";
+      extension = "xml";
+  } else if (format === "json") {
+      data = JSON.stringify(formData, null, 2);
+      mimeType = "application/json";
+      extension = "json";
   } else {
-      newLink.href = window.URL.createObjectURL(textToBLOB);
-      newLink.style.display = "none";
-      document.body.appendChild(newLink);
+      data = formatFormData(formData);
+      mimeType = "text/plain";
+      extension = "txt";
   }
 
-  newLink.click();
+  const filename = `formData.${extension}`;
+  const blob = new Blob([data], { type: mimeType });
 
-  if (window.URL != null) {
-      document.body.removeChild(newLink);
-  }
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  link.click();
 }
-const form = document.querySelector("form");
-form.addEventListener("submit", handleSubmit);
+
+function formatFormData(formData) {
+  let formattedData = "";
+  for (const [key, value] of Object.entries(formData)) {
+      formattedData += `${key}: ${value}\n`;
+  }
+  return formattedData;
+}
+
+function convertToCSV(formData) {
+  const headers = Object.keys(formData);
+  const values = Object.values(formData);
+  const csvContent = headers.join(",") + "\n" + values.join(",");
+  return csvContent;
+}
+
+function convertToXML(formData) {
+  let xmlContent = "<formData>\n";
+  for (const [key, value] of Object.entries(formData)) {
+      xmlContent += `<${key}>${value}</${key}>\n`;
+  }
+  xmlContent += "</formData>";
+  return xmlContent;
+}
+
