@@ -309,17 +309,20 @@ body footer {
         margin: 30px 0; /* Example margin */
     }
     
-/* Style for the slideshow container */
-.slideshow-container {
+    
+.slideshow-container{
     position: relative;
     max-width: 100%;
-    margin: auto;
+    margin: 200px;
 }
 
 /* Style for the individual slides */
 .mySlides {
     display: none;
 }
+
+
+
 
 /* Style for the navigation arrows */
 .prev, .next {
@@ -328,7 +331,7 @@ body footer {
     transform: translateY(-50%);
     cursor: pointer;
     padding: 16px;
-    color: white;
+    color: rgb(161, 37, 37);
     font-weight: bold;
     font-size: 20px;
     z-index: 1;
@@ -345,6 +348,25 @@ body footer {
 .next {
     right: 0;
 }
+
+
+.clients-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.client-logo {
+    width: 100%; /* Adjust as needed */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.client-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .a {
 
@@ -452,15 +474,4 @@ input[type="submit"] {
     margin-top: 10px; /* Add margin */
 }
 
-/* Style for slideshow container */
-.slideshow-container {
- 
- 
-  }
-  
-  /* Style for slideshow image */
-  .slideshow-image {
-    width: 100%; /* Set the width of the image */
-   height: 100%; /* You can add more styles here as needed */
-  }
-  
+

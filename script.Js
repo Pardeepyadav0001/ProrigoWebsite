@@ -23,6 +23,32 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";  
 }
+function validateForm() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const contact = document.getElementById("contact").value;
+  const dropdown = document.getElementById("dropdown").value;
+  const message = document.getElementById("message").value;
+
+  if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+  }
+
+  // Enable the submit button if all fields are filled
+  const submitBtn = document.getElementById("bt");
+  if (name && email && contact && dropdown && message) {
+      submitBtn.disabled = false;
+  } else {
+      submitBtn.disabled = true;
+  }
+}
+
+function validateEmail(email) {
+  const emailPattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailPattern.test(email);
+}
+
 function saveFile() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
@@ -30,6 +56,10 @@ function saveFile() {
   const dropdown = document.getElementById("dropdown").value;
   const message = document.getElementById("message").value;
 
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+}
   const formData = {
       Name: name,
       Email: email,
@@ -91,4 +121,5 @@ function convertToXML(formData) {
   xmlContent += "</formData>";
   return xmlContent;
 }
+
 
